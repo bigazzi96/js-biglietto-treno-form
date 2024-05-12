@@ -1,38 +1,58 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Biglietto treno</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    
 </head>
 <body>
-<div class="container-input">
-    <div class="input-group">
-        <label for="user-age">Età del passeggero
-        </label>
-        <input type="number" id="User-age" name="user-age">
-    </div>    
-</div>
+    <main>    
+        <header>
+            <h1>
+                <i>Il Biglietto</i>
+            </h1>
+        </header>
 
-<button class="ticket">
-    Genera
-</button>
+        <h2>
+           Inserisci i tuoi dettagli del viaggio
+        </h2>
+       
+        <div class="input-container">
+            <div class="input-group">
+                <label for="user-distance">Quanti chilometri vuoi fare ?</label>
+                <input type="text" id="user-distance" name="user-distance">
+            </div>
+            
+            <div class="input-group">
+                <label for="user-age">La tua età</label>
+                <input type="number" id="user-age" name="user-age">
+            </div>
+        </div>
 
-<section class="biglietto">
-    <p>Sconto per la tua età è:
-        <span id="discount-percentage"></span>
-    </p>
-    <p>
-        Il tuo sconto è <span  id="price-discount"></span>
-    </p>
-    <p>
-        Il prezzo del tuo biglietto è <span id="prezzo-totale"></span>
-    </p>
-</section>
+        <div class="input-container">
+            <button id="ticket-generator">
+                Genera biglietto
+            </button>
+    
+            <button id="reset-ticket">
+                Reset
+            </button>
+        </div>
 
 
+        <section class="ticket">
+            <p>
+                Il tuo: <span id="price-discount">0.00$</span>
+            </p>
+            <p>
+                Your ticket price is <span id="total-price">0.00$</span>
+            </p>
+        </section>
+    </main>
 
-<script type="text/javascript" src="/../../as.js"></script>
-
+    <script src="/script.js"></script>
 </body>
 </html>
